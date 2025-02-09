@@ -24,4 +24,8 @@ M.is_relative_path = function(path)
     return string.sub(path, 1, 1) ~= "/"
 end
 
+M.get_file_name = function(path)
+    return path:match "([^/\\]+)$"
+end
+
 return M

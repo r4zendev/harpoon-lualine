@@ -6,8 +6,6 @@ local hl = require "harpoon-lualine"
 
 local default_options = {
     icon = "󰀱 ",
-    indicators = { "1", "2", "3", "4" },
-    active_indicators = { "[1]", "[2]", "[3]", "[4]" },
     _separator = " ",
     no_harpoon = "Harpoon not loaded",
     color_active = nil,

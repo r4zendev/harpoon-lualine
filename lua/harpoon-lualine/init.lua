@@ -10,7 +10,7 @@ M.status = function(component)
 
     local harpoon_items = harpoon:list().items
 
-    local length = math.min(#harpoon_items, #component.options.indicators)
+    local length = #harpoon_items
 
     local status = {}
 
@@ -29,11 +29,9 @@ M.status = function(component)
         end
 
         local active = full_path == current_file_path
-        local indicator = nil
+        local indicator = i .. " " .. utils.get_file_name(full_path)
         if active then
-            indicator = component.options.active_indicators[i]
-        else
-            indicator = component.options.indicators[i]
+            indicator = "[" .. indicator .. "]"
         end
 
         local label = indicator
